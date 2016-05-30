@@ -10,4 +10,4 @@ RUN git clone --branch ${VERSION} https://github.com/docker/swarm ${GOPATH}/src/
 
 COPY build.sh /usr/bin/
 
-ENTRYPOINT ["/usr/bin/entry.sh"]
+ENTRYPOINT ["/usr/bin/build.sh"]
