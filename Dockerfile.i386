@@ -1,0 +1,12 @@
+FROM resin/raspberrypi-alpine-golang:1.5
+
+RUN apk add --no-cache mercurial ca-certificates
+
+ENV VERSION v1.2.2
+ENV GOARCH 386
+
+RUN git clone --branch ${VERSION} https://github.com/docker/swarm ${GOPATH}/src/github.com/docker/swarm
+
+COPY build.sh /usr/bin/
+
+ENTRYPOINT ["/usr/bin/entry.sh"]
