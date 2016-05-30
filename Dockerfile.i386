@@ -1,4 +1,4 @@
-FROM resin/raspberrypi-alpine-golang:1.5
+FROM resin/edison-alpine-golang:1.5
 
 RUN apk add --no-cache mercurial ca-certificates
 
