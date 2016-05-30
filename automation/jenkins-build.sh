@@ -14,7 +14,6 @@ for arch in $ARCHS; do
 	dirName=swarm-linux-$arch-$version
 
 	mkdir $dirName
-	chmod +x output/swarm
 	cp output/swarm $dirName/
 	tar -cvzf $dirName.tar.gz $dirName
 	sha256sum $dirName.tar.gz > $dirName.tar.gz.sha256
